@@ -22,7 +22,7 @@ public class damageCard : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("clicked");
+
         ghost.GetComponent<ghostBehaviour>().TakeDamage(damage);
     }
 }

@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems; 
 
 
-public class buffCard : MonoBehaviour
+public class buffCard : MonoBehaviour, IPointerClickHandler
 {
-    public enum Debuff{
-        OPFX,
-        TwoX
-    };
-
-    private Vector3 scaleNormal = new Vector3(1.5f, 2.0f, 1.0f);
-    private Vector3 scaleChange = new Vector3(2.25f, 3.0f, 1.0f);
-
-
+    public  GameObject ghost;
+    public float multi = 0;
+    public float multiLength = 0;
     // Update is called once per frame
     void Update()
     {
         
     }
-
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        ghost.GetComponent<ghostBehaviour>().Debuff(multi, multiLength);
+    }
 
 }

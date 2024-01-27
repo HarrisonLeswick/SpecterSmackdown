@@ -10,19 +10,17 @@ public class cardBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("clicked");
+        //Debug.Log("clicked");
     }
 
 public void OnPointerEnter(PointerEventData eventData)
    {
         gameObject.transform.localScale = scaleChange;
-        Debug.Log("enter");
    }
 
      
 public void OnPointerExit(PointerEventData eventData)
    {
         gameObject.transform.localScale = scaleNormal;
-        Debug.Log("left");
    }
 }

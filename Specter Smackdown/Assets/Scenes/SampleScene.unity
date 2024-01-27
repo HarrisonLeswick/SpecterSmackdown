@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   dmgMulti: 1
+  multiLength: 0
 --- !u!212 &324320849
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -234,6 +235,7 @@ GameObject:
   - component: {fileID: 329142465}
   - component: {fileID: 329142464}
   - component: {fileID: 329142467}
+  - component: {fileID: 329142468}
   m_Layer: 0
   m_Name: 1.5 buff
   m_TagString: Card
@@ -346,6 +348,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &329142468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329142463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  multi: 1.5
+  multiLength: 2
 --- !u!1 &360693751
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +375,7 @@ GameObject:
   - component: {fileID: 360693753}
   - component: {fileID: 360693752}
   - component: {fileID: 360693755}
+  - component: {fileID: 360693756}
   m_Layer: 0
   m_Name: 2.0 buff
   m_TagString: Card
@@ -470,6 +488,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &360693756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360693751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  multi: 2
+  multiLength: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  damage: 10
+  damage: 30
 --- !u!114 &1439302350
 MonoBehaviour:
   m_ObjectHideFlags: 0
