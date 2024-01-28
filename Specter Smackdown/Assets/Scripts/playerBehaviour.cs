@@ -2,32 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ghostBehaviour : MonoBehaviour
+public class playerBehaviour : MonoBehaviour
 {
-
     public float laughs = 0;
     public float laughsLimit;
     public float dmgMulti = 1;
     public float multiLength = 0;
-
+    
     public healthBar laughBar;
-
     public  GameObject turnManager;
-    public  GameObject player;
 
-
+    // Start is called before the first frame update
     void Start()
     {
         laughBar.SetMaxLaugh(laughsLimit);  
     }
-    
-    void Update(){
-    }
-
     public void TakeDamage(float damage){
         laughs += (damage * dmgMulti);
         laughBar.SetLaugh(laughs);
-        Debug.Log("Ouch! Ghost took "+ damage + " damage! Now Ghost is at "+ laughs+" laughs!");
+        Debug.Log("Ouch! Player took "+ damage + " damage! Now Player is at "+ laughs+" laughs!");
         if(multiLength > 0){
             multiLength--;
             if(multiLength == 0){
@@ -36,18 +29,20 @@ public class ghostBehaviour : MonoBehaviour
             }
         }
         if(laughs >= laughsLimit){
-            Debug.Log("Ghost Died");
+            Debug.Log("Player Died");
         }
-           turnManager.GetComponent<turnManager>().TakeTurn(); 
-        }
+    }
 
     public void Debuff(float multi, float length){
         dmgMulti = multi;
         multiLength = length;
         Debug.Log("I know do "+ dmgMulti +"x damage for "+ multiLength + " turn!");
-           turnManager.GetComponent<turnManager>().TakeTurn(); 
+    }
 
-        }
-
-    
+    public void TestDamage(){
+        laughs += 20;
+        Debug.Log("Player took 20 damage!");
+       laughBar.SetLaugh(laughs);
+       turnManager.GetComponent<turnManager>().TakeTurn(); 
+    }
 }
