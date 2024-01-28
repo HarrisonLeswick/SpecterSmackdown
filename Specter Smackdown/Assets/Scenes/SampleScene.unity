@@ -342,9 +342,9 @@ GameObject:
   - component: {fileID: 329142467}
   - component: {fileID: 329142464}
   - component: {fileID: 329142469}
-  - component: {fileID: 329142468}
+  - component: {fileID: 329142470}
   m_Layer: 0
-  m_Name: 1.5 buff
+  m_Name: Bar Joke
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,21 +455,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &329142468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329142463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ghost: {fileID: 324320847}
-  multi: 1.5
-  multiLength: 2
 --- !u!114 &329142469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +469,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 3
+--- !u!114 &329142470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329142463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a5368679ea391458d0e39b7c301656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 0
+  player: {fileID: 474343860}
+  targetPlayer: 1
+  damage: -5
 --- !u!1 &360693751
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +501,7 @@ GameObject:
   - component: {fileID: 360693757}
   - component: {fileID: 360693756}
   m_Layer: 0
-  m_Name: 2.0 buff
+  m_Name: Knock Knock Joke
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +625,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  multi: 2
+  targetGhost: 1
+  player: {fileID: 474343860}
+  targetPlayer: 1
+  multi: 0
   multiLength: 1
 --- !u!114 &360693757
 MonoBehaviour:
@@ -652,8 +657,10 @@ GameObject:
   - component: {fileID: 368618429}
   - component: {fileID: 368618430}
   - component: {fileID: 368618433}
+  - component: {fileID: 368618435}
+  - component: {fileID: 368618434}
   m_Layer: 0
-  m_Name: Card 7
+  m_Name: Deadpan
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,6 +785,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 0
+--- !u!114 &368618434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368618428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 0
+  player: {fileID: 474343860}
+  targetPlayer: 1
+  multi: 0
+  multiLength: 1
+--- !u!114 &368618435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368618428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a5368679ea391458d0e39b7c301656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 1
+  player: {fileID: 474343860}
+  targetPlayer: 0
+  damage: 20
 --- !u!1 &474343860
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +832,7 @@ GameObject:
   - component: {fileID: 474343862}
   - component: {fileID: 474343861}
   m_Layer: 0
-  m_Name: GhostJoker
+  m_Name: Joker
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1673,8 +1715,9 @@ GameObject:
   - component: {fileID: 1232798611}
   - component: {fileID: 1232798612}
   - component: {fileID: 1232798615}
+  - component: {fileID: 1232798616}
   m_Layer: 0
-  m_Name: Card 9
+  m_Name: Puns
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1799,6 +1842,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 0
+--- !u!114 &1232798616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232798610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 0
+  player: {fileID: 474343860}
+  targetPlayer: 1
+  multi: 2
+  multiLength: 1
 --- !u!1 &1262106472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,8 +1949,9 @@ GameObject:
   - component: {fileID: 1272277306}
   - component: {fileID: 1272277307}
   - component: {fileID: 1272277310}
+  - component: {fileID: 1272277311}
   m_Layer: 0
-  m_Name: Card 5
+  m_Name: Your mom
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2014,6 +2076,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 0
+--- !u!114 &1272277311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272277305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 0
+  player: {fileID: 474343860}
+  targetPlayer: 1
+  multi: 1.5
+  multiLength: 1
 --- !u!1 &1439302348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,7 +2109,7 @@ GameObject:
   - component: {fileID: 1439302354}
   - component: {fileID: 1439302349}
   m_Layer: 0
-  m_Name: 30 dmg
+  m_Name: Self-Deprication
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2048,6 +2128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
+  targetGhost: 1
+  player: {fileID: 474343860}
+  targetPlayer: 1
   damage: 30
 --- !u!114 &1439302350
 MonoBehaviour:
@@ -2225,8 +2308,9 @@ GameObject:
   - component: {fileID: 1520670317}
   - component: {fileID: 1520670318}
   - component: {fileID: 1520670321}
+  - component: {fileID: 1520670322}
   m_Layer: 0
-  m_Name: Card 6
+  m_Name: 'Slapstick '
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2351,6 +2435,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 0
+--- !u!114 &1520670322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520670316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a5368679ea391458d0e39b7c301656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 1
+  player: {fileID: 474343860}
+  targetPlayer: 0
+  damage: 10
 --- !u!1 &1572959427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2511,7 @@ MonoBehaviour:
   - {x: 3, y: -10.45, z: 0}
   cardCount: 11
   cardBlank: 4
+  missingCards: 0
 --- !u!61 &1572959429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2709,8 +2811,9 @@ GameObject:
   - component: {fileID: 1916381464}
   - component: {fileID: 1916381465}
   - component: {fileID: 1916381468}
+  - component: {fileID: 1916381469}
   m_Layer: 0
-  m_Name: Card 8
+  m_Name: Dark
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2835,6 +2938,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 0
+--- !u!114 &1916381469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916381463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 1
+  player: {fileID: 474343860}
+  targetPlayer: 0
+  multi: 0
+  multiLength: 1
 --- !u!1 &2017653154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,28 +3073,14 @@ GameObject:
   - component: {fileID: 2075932365}
   - component: {fileID: 2075932362}
   - component: {fileID: 2075932366}
-  - component: {fileID: 2075932361}
+  - component: {fileID: 2075932367}
   m_Layer: 0
-  m_Name: 10 dmg
+  m_Name: Dad Joke
   m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2075932361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075932360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a5368679ea391458d0e39b7c301656, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ghost: {fileID: 324320847}
-  damage: 10
 --- !u!114 &2075932362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3093,3 +3200,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPile: {fileID: 1572959427}
   slot: 1
+--- !u!114 &2075932367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075932360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce7a60aaddf944997b548109b37ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghost: {fileID: 324320847}
+  targetGhost: 1
+  player: {fileID: 474343860}
+  targetPlayer: 0
+  multi: 0.5
+  multiLength: 1

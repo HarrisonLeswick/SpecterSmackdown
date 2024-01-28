@@ -6,17 +6,22 @@ using UnityEngine.EventSystems;
 
 public class buffCard : MonoBehaviour, IPointerClickHandler
 {
-    public  GameObject ghost;
+    public GameObject ghost;
+    public bool targetGhost;
+    public GameObject player;
+    public bool targetPlayer;
+
     public float multi = 0;
     public float multiLength = 0;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        ghost.GetComponent<ghostBehaviour>().Debuff(multi, multiLength);
+        if(targetGhost){
+            ghost.GetComponent<ghostBehaviour>().Debuff(multi, multiLength);
+        }
+        if(targetPlayer){
+           player.GetComponent<playerBehaviour>().Debuff(multi, multiLength);
+        }
     }
 
 }

@@ -17,6 +17,7 @@ public class playerBehaviour : MonoBehaviour
     {
         laughBar.SetMaxLaugh(laughsLimit);  
     }
+
     public void TakeDamage(float damage){
         laughs += (damage * dmgMulti);
         laughBar.SetLaugh(laughs);
@@ -36,7 +37,7 @@ public class playerBehaviour : MonoBehaviour
     public void Debuff(float multi, float length){
         dmgMulti = multi;
         multiLength = length;
-        Debug.Log("I know do "+ dmgMulti +"x damage for "+ multiLength + " turn!");
+        Debug.Log("I now do "+ dmgMulti +"x damage for "+ multiLength + " turn!");
     }
 
     public void TestDamage(){

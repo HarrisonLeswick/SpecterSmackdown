@@ -5,24 +5,20 @@ using UnityEngine.EventSystems;
 
 public class damageCard : MonoBehaviour, IPointerClickHandler
 {
-    public  GameObject ghost;
+    public GameObject ghost;
+    public bool targetGhost;
+    public GameObject player;
+    public bool targetPlayer;
 
     public float damage = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //ghost = GameObject.Find("Ghost").GetComponent("ghostBehaviour");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
-        ghost.GetComponent<ghostBehaviour>().TakeDamage(damage);
+        if(targetGhost){
+           ghost.GetComponent<ghostBehaviour>().TakeDamage(damage);
+        }
+        if(targetPlayer){
+           player.GetComponent<playerBehaviour>().TakeDamage(damage);
+        }
     }
 }

@@ -21,9 +21,6 @@ public class ghostBehaviour : MonoBehaviour
         laughBar.SetMaxLaugh(laughsLimit);  
     }
     
-    void Update(){
-    }
-
     public void TakeDamage(float damage){
         laughs += (damage * dmgMulti);
         laughBar.SetLaugh(laughs);
@@ -44,7 +41,7 @@ public class ghostBehaviour : MonoBehaviour
     public void Debuff(float multi, float length){
         dmgMulti = multi;
         multiLength = length;
-        Debug.Log("I know do "+ dmgMulti +"x damage for "+ multiLength + " turn!");
+        Debug.Log("Ghost now does "+ dmgMulti +"x damage for "+ multiLength + " turn!");
            turnManager.GetComponent<turnManager>().TakeTurn(); 
 
         }
