@@ -882,9 +882,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  targetGhost: 0
+  targetGhost: 1
   player: {fileID: 474343860}
-  targetPlayer: 1
+  targetPlayer: 0
   multi: 0
   multiLength: 1
 --- !u!114 &368618435
@@ -1939,9 +1939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  targetGhost: 0
+  targetGhost: 1
   player: {fileID: 474343860}
-  targetPlayer: 1
+  targetPlayer: 0
   multi: 2
   multiLength: 1
 --- !u!1 &1262106472
@@ -2173,9 +2173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  targetGhost: 0
+  targetGhost: 1
   player: {fileID: 474343860}
-  targetPlayer: 1
+  targetPlayer: 0
   multi: 1.5
   multiLength: 1
 --- !u!1 &1439302348
@@ -3035,9 +3035,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  targetGhost: 1
+  targetGhost: 0
   player: {fileID: 474343860}
-  targetPlayer: 0
+  targetPlayer: 1
   multi: 0
   multiLength: 1
 --- !u!1 &2017653154
@@ -3297,8 +3297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 324320847}
-  targetGhost: 1
+  targetGhost: 0
   player: {fileID: 474343860}
-  targetPlayer: 0
+  targetPlayer: 1
   multi: 0.5
   multiLength: 1
